@@ -22,4 +22,13 @@
 
 - (void)registerUser:(UserInfo *)user;      //用户注册
 
+- (void)addFriend:(UserInfo *)user;
+- (void)removeFriend:(UserInfo *)user;
+
+
+- (XMPPvCardAvatarModule *)avatarModule;    //头像模块;
+- (NSManagedObjectContext *)rosterContext;  //好友存储
+- (NSManagedObjectContext *)vCardContext;   //名片存储
+- (NSManagedObjectContext *)messageContext; //消息存储
+
 @end

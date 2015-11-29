@@ -17,6 +17,7 @@
 		76316A261C09FB1500B97B38 /* CFAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 76316A251C09FB1500B97B38 /* CFAccountManager.m */; settings = {ASSET_TAGS = (); }; };
 		76316A2A1C09FBBC00B97B38 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 76316A291C09FBBC00B97B38 /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		768806F81C0AFFDE001E611F /* CFFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 768806F71C0AFFDE001E611F /* CFFriendsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		768806FB1C0B4057001E611F /* CFAddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 768806FA1C0B4057001E611F /* CFAddFriendViewController.m */; settings = {ASSET_TAGS = (); }; };
 		840B4E5D1BFB4ACE00EADDC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B4E5C1BFB4ACE00EADDC1 /* main.m */; };
 		840B4E601BFB4ACE00EADDC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B4E5F1BFB4ACE00EADDC1 /* AppDelegate.m */; };
 		840B4E631BFB4ACE00EADDC1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B4E621BFB4ACE00EADDC1 /* ViewController.m */; };
@@ -130,6 +131,8 @@
 		76316A291C09FBBC00B97B38 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
 		768806F61C0AFFDE001E611F /* CFFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFFriendsViewController.h; sourceTree = "<group>"; };
 		768806F71C0AFFDE001E611F /* CFFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFFriendsViewController.m; sourceTree = "<group>"; };
+		768806F91C0B4057001E611F /* CFAddFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFAddFriendViewController.h; sourceTree = "<group>"; };
+		768806FA1C0B4057001E611F /* CFAddFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFAddFriendViewController.m; sourceTree = "<group>"; };
 		840B4E581BFB4ACE00EADDC1 /* Code4App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Code4App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		840B4E5C1BFB4ACE00EADDC1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		840B4E5E1BFB4ACE00EADDC1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -596,6 +599,8 @@
 			children = (
 				843CA7C01C06C21A00AEB78A /* CFProfileViewController.h */,
 				843CA7BF1C06C21A00AEB78A /* CFProfileViewController.m */,
+				768806F91C0B4057001E611F /* CFAddFriendViewController.h */,
+				768806FA1C0B4057001E611F /* CFAddFriendViewController.m */,
 				76316A101C099AC500B97B38 /* CFLoginViewController.h */,
 				76316A111C099AC500B97B38 /* CFLoginViewController.m */,
 				76316A131C099AD300B97B38 /* CFRegisterViewController.h */,
@@ -812,6 +817,7 @@
 				843CA78B1C033F4000AEB78A /* CFHomeDetailNode.m in Sources */,
 				840B4E9E1BFDB10A00EADDC1 /* CFTabBarController.m in Sources */,
 				840B4E971BFB708000EADDC1 /* HTMLNode.m in Sources */,
+				768806FB1C0B4057001E611F /* CFAddFriendViewController.m in Sources */,
 				840B4E5D1BFB4ACE00EADDC1 /* main.m in Sources */,
 				843CA7F51C0743ED00AEB78A /* CFSegmentedViewController.m in Sources */,
 				843CA76C1C007DC400AEB78A /* ShareManager.m in Sources */,

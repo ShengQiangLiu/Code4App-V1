@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Code4App/Modules/Manager/CFChatServerManager.m"
-            timestampString = "470473648.004815"
+            timestampString = "470503824.812238"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
-            landmarkName = "-connect"
+            startingLineNumber = "235"
+            endingLineNumber = "235"
+            landmarkName = "-addFriend:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

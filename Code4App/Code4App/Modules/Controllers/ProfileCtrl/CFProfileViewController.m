@@ -10,6 +10,7 @@
 #import "CFRegisterViewController.h"
 #import "ShareManager.h"
 #import "CFLoginViewController.h"
+#import "CFAddFriendViewController.h"
 
 @interface CFProfileViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -109,7 +110,8 @@
     }
     else
     {
-        
+        CFAddFriendViewController *addFriendViewCtrl = [[CFAddFriendViewController alloc] init];
+        [self.navigationController pushViewController:addFriendViewCtrl animated:YES];
     }
   
 }

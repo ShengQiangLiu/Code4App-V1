@@ -38,9 +38,11 @@
     // Do any additional setup after loading the view.
     
     if (!_segmentedControl) {
-        NSArray *items = @[[[PPiFlatSegmentItem alloc] initWithTitle:@"Segmented1" andIcon:nil],
-                           [[PPiFlatSegmentItem alloc] initWithTitle:@"Segmented2" andIcon:nil]
+        NSArray *items = @[[[PPiFlatSegmentItem alloc] initWithTitle:@"Group" andIcon:nil],
+                           [[PPiFlatSegmentItem alloc] initWithTitle:@"Friends" andIcon:nil],
+                           [[PPiFlatSegmentItem alloc] initWithTitle:@"Message" andIcon:nil]
                            ];
+        
         _segmentedControl = [[PPiFlatSegmentedControl alloc] initWithFrame:CGRectMake(10, 0, self.view.frame.size.width-20, 40) items:items iconPosition:IconPositionRight andSelectionBlock:^(NSUInteger segmentIndex) {
             [self segmentedControlSelected:segmentIndex];
         } iconSeparation:5];

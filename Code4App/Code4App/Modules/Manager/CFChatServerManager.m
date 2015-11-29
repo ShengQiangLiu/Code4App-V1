@@ -50,7 +50,7 @@
 {
     XMPPStream *_xmppStream;
     XMPPReconnect *_xmppReconnect;              //重连模块
-        XMPPRoom *_xmppRoom;                        //多人聊天
+    XMPPRoom *_xmppRoom;                        //多人聊天
     XMPPRoster  *_xmppRoster;                   //通讯录
     XMPPvCardAvatarModule *_xmppAvatarModule;   //头像模块
     XMPPvCardTempModule *_xmppvCardModule;      //电子身份模块
@@ -100,10 +100,30 @@
 // 加载常用模块
 - (void)loadModules
 {
+    
     //重连模块
     _xmppReconnect = [[XMPPReconnect alloc] init];
     [_xmppReconnect activate:_xmppStream];
-
+    
+    // 使用 CoreData 管理通讯录
+    XMPPRosterCoreDataStorage *rosterStorage = [XMPPRosterCoreDataStorage sharedInstance];
+    // 花名册
+    _xmppRoster = [[XMPPRoster alloc] initWithRosterStorage:rosterStorage];
+    // 自动获取通讯录
+    _xmppRoster.autoFetchRoster = YES;
+    _xmppRoster.autoAcceptKnownPresenceSubscriptionRequests = YES;
+    [_xmppRoster activate:_xmppStream];
+    
+    // 电子名片
+    XMPPvCardCoreDataStorage *vCardStorage = [XMPPvCardCoreDataStorage sharedInstance];
+    _xmppvCardModule = [[XMPPvCardTempModule alloc] initWithvCardStorage:vCardStorage];
+    [_xmppvCardModule activate:_xmppStream];
+    
+    // 头像
+    _xmppAvatarModule = [[XMPPvCardAvatarModule alloc] initWithvCardTempModule:_xmppvCardModule];
+    [_xmppAvatarModule activate:_xmppStream];
+    
+    
 }
 
 // 2、连接服务器
@@ -209,6 +229,44 @@
 
 }
 
+#pragma mark - 用户信息&好友管理
+- (void)addFriend:(UserInfo *)user
+{
+    XMPPJID *jid = [XMPPJID jidWithString:user.username];
+    [_xmppRoster addUser:jid withNickname:nil];
+}
+
+- (void)removeFriend:(UserInfo *)user
+{
+    XMPPJID *jid = [XMPPJID jidWithString:user.username];
+    [_xmppRoster removeUser:jid];
+}
+
+//头像模块
+- (XMPPvCardAvatarModule *)avatarModule
+{
+    return _xmppAvatarModule;
+}
+
+//好友存储
+- (NSManagedObjectContext *)rosterContext
+{
+    XMPPRosterCoreDataStorage *storage = [XMPPRosterCoreDataStorage sharedInstance];
+    return [storage mainThreadManagedObjectContext];
+}
+
+////名片存储
+//- (NSManagedObjectContext *)vCardContext
+//{
+//    
+//}
+//
+////消息存储
+//- (NSManagedObjectContext *)messageContext
+//{
+//    
+//}
+
 #pragma mark - XMPPStreamDelegate
 //服务器连接建立成功
 - (void)xmppStreamDidConnect:(XMPPStream *)sender
@@ -264,6 +322,83 @@
 - (void)xmppStream:(XMPPStream *)sender didNotAuthenticate:(NSXMLElement *)error
 {
     NSLog(@"用户登录失败: %@", error);
+}
+
+#pragma mark - Receive Message
+//接收到信息请求
+- (BOOL)xmppStream:(XMPPStream *)sender didReceiveIQ:(XMPPIQ *)iq
+{
+    NSLog(@"Received IQ: %@", iq);
+    return YES;
+}
+
+//接收到消息
+- (void)xmppStream:(XMPPStream *)sender didReceiveMessage:(XMPPMessage *)message
+{
+    NSLog(@"Received Message%@", message);
+}
+
+//接收到上线信息
+- (void)xmppStream:(XMPPStream *)sender didReceivePresence:(XMPPPresence *)presence
+{
+    //    if ([[presence type] isEqualToString:@"unsubscribe"]) {
+    //        // 删除好友
+    //        [_xmppRoster removeUser:presence.from];
+    //    }
+    //    else if ([[presence type] isEqualToString:@"subscribe"])
+    //    {
+    //        // 接收好友请求
+    //        [_xmppRoster acceptPresenceSubscriptionRequestFrom:presence.from andAddToRoster:YES];
+    //        // 拒绝好友请求
+    //        [_xmppRoster rejectPresenceSubscriptionRequestFrom:presence.from];
+    //    }
+    //
+    
+    NSLog(@"Received Presence: %@", presence);
+}
+
+//接收错误
+- (void)xmppStream:(XMPPStream *)sender didReceiveError:(NSXMLElement *)error
+{
+    NSLog(@"Receive Error: %@", error);
+}
+
+#pragma mark - Send
+//发送信息请求成功
+- (void)xmppStream:(XMPPStream *)sender didSendIQ:(XMPPIQ *)iq
+{
+    NSLog(@"Send IQ: %@", iq);
+}
+
+//发送消息成功
+- (void)xmppStream:(XMPPStream *)sender didSendMessage:(XMPPMessage *)message
+{
+    NSLog(@"Send Message: %@", message);
+}
+
+//发送在线信息成功
+- (void)xmppStream:(XMPPStream *)sender didSendPresence:(XMPPPresence *)presence
+{
+    NSLog(@"Send Presence: %@", presence);
+}
+
+#pragma mark - Failure
+//发送信息请求失败
+- (void)xmppStream:(XMPPStream *)sender didFailToSendIQ:(XMPPIQ *)iq error:(NSError *)error
+{
+    NSLog(@"Fail To Send IQ: %@\nError: %@", iq, error);
+}
+
+//发送消息失败
+- (void)xmppStream:(XMPPStream *)sender didFailToSendMessage:(XMPPMessage *)message error:(NSError *)error
+{
+    NSLog(@"Fail To Send Message: %@\nError: %@", message, error);
+}
+
+//发送在线信息失败
+- (void)xmppStream:(XMPPStream *)sender didFailToSendPresence:(XMPPPresence *)presence error:(NSError *)error
+{
+    NSLog(@"Fail To Send Presence: %@\nError: %@", presence, error);
 }
 
 

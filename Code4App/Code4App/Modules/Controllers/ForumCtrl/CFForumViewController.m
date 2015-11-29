@@ -12,6 +12,7 @@
 
 #import "CFGroupViewController.h"
 #import "CFYouViewController.h"
+#import "CFFriendsViewController.h"
 
 @interface CFForumViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -25,7 +26,6 @@
     self = [super init];
     if (self) {
         self.navigationItem.title = @"Forum";
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(rightBarButtonClick:)];
         [self initSubviews];
     }
     return self;
@@ -37,7 +37,7 @@
     [self.view addSubview:self.tableView];
     
 
-    [self setViewControllers:@[[CFGroupViewController new], [CFYouViewController new]]];
+    [self setViewControllers:@[[CFGroupViewController new], [CFFriendsViewController new],[CFYouViewController new]]];
     [self setSelectedViewControllerIndex:0];
 
 }
@@ -61,11 +61,6 @@
 - (void)viewDidLayoutSubviews
 {
     self.tableView.frame = self.view.frame;
-}
-
-- (void)rightBarButtonClick:(UIBarButtonItem *)item
-{
-    
 }
 
 #pragma mark - UITableView
