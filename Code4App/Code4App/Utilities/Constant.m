@@ -8,3 +8,10 @@
 
 #import "Constant.h"
 
+//60s超时
+const NSInteger kTimeoutLength = 20;
+
+NSString * const kKeyChainIdentifier = @"com.codefourapp.opensource";
+
+
+NSString *const kHostName = @"172.16.77.131";

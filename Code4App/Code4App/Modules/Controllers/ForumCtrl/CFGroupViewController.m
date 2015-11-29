@@ -35,6 +35,7 @@ static NSString *identifier = @"identifier";
     [self.collectionView setShowsVerticalScrollIndicator:NO];
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:identifier];
     [self.view addSubview:self.collectionView];
+    self.collectionView.backgroundColor = [UIColor whiteColor];
 
 }
 
@@ -53,11 +54,7 @@ static NSString *identifier = @"identifier";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-//    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
-//    label.backgroundColor = [UIColor redColor];
-//    label.text = [NSString stringWithFormat:@"%ld", indexPath.row];
-//    [cell.contentView addSubview:label];
-    cell.backgroundColor = [UIColor whiteColor];
+    cell.backgroundColor = [UIColor yellowColor];
     return cell;
 }
 

@@ -7,7 +7,9 @@
 //
 
 #import "CFProfileViewController.h"
+#import "CFRegisterViewController.h"
 #import "ShareManager.h"
+#import "CFLoginViewController.h"
 
 @interface CFProfileViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -21,7 +23,6 @@
     self = [super init];
     if (self) {
         self.navigationItem.title = @"Profile";
-        [self initsubviews];
     }
     return self;
 }
@@ -29,7 +30,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.view addSubview:self.tableView];
+    [self initsubviews];
+
     
 }
 
@@ -55,18 +57,19 @@
     self.tableView.delegate = self;
     self.tableView.tableFooterView = [UIView new];
     self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 100)];
-    
+    [self.view addSubview:self.tableView];
+
 }
 #pragma mark - UITableView
 #pragma mark UITableViewDatasource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 3;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -76,21 +79,29 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"aaaa %ld", indexPath.row];
+    if (indexPath.section == 1) {
+        cell.textLabel.text = [NSString stringWithFormat:@"aaaa %@", @"注册"];
+    } else {
+        cell.textLabel.text = [NSString stringWithFormat:@"aaaa %@", @"登录"];
+    }
     return cell;
 }
 
 #pragma mark UITableViewDelegate
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"section: %ld, row: %ld", indexPath.section, indexPath.row);
+    if (indexPath.section == 1)
+    {
+        CFRegisterViewController *registerViewCtrl = [[CFRegisterViewController alloc] init];
+        [self.navigationController pushViewController:registerViewCtrl animated:YES];
+    }
+    else
+    {
+        CFLoginViewController *loginViewCtrl = [[CFLoginViewController alloc] init];
+        [self.navigationController pushViewController:loginViewCtrl animated:YES];
+    }
+  
 }
-*/
 
 @end

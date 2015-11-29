@@ -8,7 +8,6 @@
 
 #import "CFChatViewController.h"
 #import <JSQMessagesViewController/JSQMessages.h>
-#import <MMXXMPPFramework/MMXXMPPFramework-umbrella.h>
 
 @interface CFChatViewController () <NSFetchedResultsControllerDelegate>
 {

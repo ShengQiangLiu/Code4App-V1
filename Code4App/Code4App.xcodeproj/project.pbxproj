@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		5BFBF1B0FF7DC53A5C28493F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3D5ACA7B151C84589A215A /* libPods.a */; };
+		76316A121C099AC500B97B38 /* CFLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76316A111C099AC500B97B38 /* CFLoginViewController.m */; settings = {ASSET_TAGS = (); }; };
+		76316A151C099AD300B97B38 /* CFRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76316A141C099AD300B97B38 /* CFRegisterViewController.m */; settings = {ASSET_TAGS = (); }; };
+		76316A181C09E7E500B97B38 /* CFChatServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 76316A171C09E7E500B97B38 /* CFChatServerManager.m */; settings = {ASSET_TAGS = (); }; };
+		76316A1F1C09FA2100B97B38 /* CodeDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 76316A1B1C09FA2100B97B38 /* CodeDetailModel.m */; settings = {ASSET_TAGS = (); }; };
+		76316A201C09FA2100B97B38 /* CodeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 76316A1D1C09FA2100B97B38 /* CodeListModel.m */; settings = {ASSET_TAGS = (); }; };
+		76316A231C09FA3A00B97B38 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 76316A221C09FA3A00B97B38 /* UserInfo.m */; settings = {ASSET_TAGS = (); }; };
+		76316A261C09FB1500B97B38 /* CFAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 76316A251C09FB1500B97B38 /* CFAccountManager.m */; settings = {ASSET_TAGS = (); }; };
+		76316A2A1C09FBBC00B97B38 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 76316A291C09FBBC00B97B38 /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		840B4E5D1BFB4ACE00EADDC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B4E5C1BFB4ACE00EADDC1 /* main.m */; };
 		840B4E601BFB4ACE00EADDC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B4E5F1BFB4ACE00EADDC1 /* AppDelegate.m */; };
 		840B4E631BFB4ACE00EADDC1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B4E621BFB4ACE00EADDC1 /* ViewController.m */; };
@@ -84,12 +92,10 @@
 		840B4FA31C003CAB00EADDC1 /* CFAppAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B4FA21C003CAB00EADDC1 /* CFAppAPIManager.m */; };
 		840B4FA61C003FE200EADDC1 /* CFAppDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B4FA51C003FE200EADDC1 /* CFAppDataManager.m */; };
 		843CA76C1C007DC400AEB78A /* ShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 843CA76A1C007DC400AEB78A /* ShareManager.m */; };
-		843CA7741C007E7300AEB78A /* CodeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 843CA7731C007E7300AEB78A /* CodeListModel.m */; };
 		843CA7781C007E9A00AEB78A /* CFHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843CA7771C007E9A00AEB78A /* CFHomeViewController.m */; };
 		843CA77E1C007EB600AEB78A /* CFHomeCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 843CA77B1C007EB600AEB78A /* CFHomeCellNode.m */; };
 		843CA77F1C007EB600AEB78A /* CFHomePopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 843CA77D1C007EB600AEB78A /* CFHomePopover.m */; };
 		843CA7821C01B2FD00AEB78A /* CFHomeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843CA7811C01B2FD00AEB78A /* CFHomeDetailViewController.m */; };
-		843CA7851C01BEE500AEB78A /* CodeDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 843CA7841C01BEE500AEB78A /* CodeDetailModel.m */; };
 		843CA78B1C033F4000AEB78A /* CFHomeDetailNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 843CA78A1C033F4000AEB78A /* CFHomeDetailNode.m */; };
 		843CA78F1C03518A00AEB78A /* codeusage.html in Resources */ = {isa = PBXBuildFile; fileRef = 843CA78E1C03518A00AEB78A /* codeusage.html */; };
 		843CA7B71C06AF4F00AEB78A /* CFForumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843CA7B51C06AF4F00AEB78A /* CFForumViewController.m */; };
@@ -106,6 +112,22 @@
 		0193E39D3BD4BDAE709FABB6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		44A0E441910779EE2D2BF186 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5A3D5ACA7B151C84589A215A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		76316A101C099AC500B97B38 /* CFLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFLoginViewController.h; sourceTree = "<group>"; };
+		76316A111C099AC500B97B38 /* CFLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFLoginViewController.m; sourceTree = "<group>"; };
+		76316A131C099AD300B97B38 /* CFRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFRegisterViewController.h; sourceTree = "<group>"; };
+		76316A141C099AD300B97B38 /* CFRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFRegisterViewController.m; sourceTree = "<group>"; };
+		76316A161C09E7E500B97B38 /* CFChatServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFChatServerManager.h; sourceTree = "<group>"; };
+		76316A171C09E7E500B97B38 /* CFChatServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFChatServerManager.m; sourceTree = "<group>"; };
+		76316A1A1C09FA2100B97B38 /* CodeDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeDetailModel.h; sourceTree = "<group>"; };
+		76316A1B1C09FA2100B97B38 /* CodeDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeDetailModel.m; sourceTree = "<group>"; };
+		76316A1C1C09FA2100B97B38 /* CodeListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeListModel.h; sourceTree = "<group>"; };
+		76316A1D1C09FA2100B97B38 /* CodeListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeListModel.m; sourceTree = "<group>"; };
+		76316A211C09FA3A00B97B38 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		76316A221C09FA3A00B97B38 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
+		76316A241C09FB1500B97B38 /* CFAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFAccountManager.h; sourceTree = "<group>"; };
+		76316A251C09FB1500B97B38 /* CFAccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFAccountManager.m; sourceTree = "<group>"; };
+		76316A281C09FBBC00B97B38 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		76316A291C09FBBC00B97B38 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
 		840B4E581BFB4ACE00EADDC1 /* Code4App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Code4App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		840B4E5C1BFB4ACE00EADDC1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		840B4E5E1BFB4ACE00EADDC1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -205,8 +227,6 @@
 		840B4FA51C003FE200EADDC1 /* CFAppDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFAppDataManager.m; sourceTree = "<group>"; };
 		843CA76A1C007DC400AEB78A /* ShareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareManager.m; sourceTree = "<group>"; };
 		843CA76B1C007DC400AEB78A /* ShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareManager.h; sourceTree = "<group>"; };
-		843CA7721C007E7300AEB78A /* CodeListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeListModel.h; sourceTree = "<group>"; };
-		843CA7731C007E7300AEB78A /* CodeListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeListModel.m; sourceTree = "<group>"; };
 		843CA7761C007E9A00AEB78A /* CFHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFHomeViewController.h; sourceTree = "<group>"; };
 		843CA7771C007E9A00AEB78A /* CFHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFHomeViewController.m; sourceTree = "<group>"; };
 		843CA77A1C007EB600AEB78A /* CFHomeCellNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFHomeCellNode.h; sourceTree = "<group>"; };
@@ -215,8 +235,6 @@
 		843CA77D1C007EB600AEB78A /* CFHomePopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFHomePopover.m; sourceTree = "<group>"; };
 		843CA7801C01B2FD00AEB78A /* CFHomeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFHomeDetailViewController.h; sourceTree = "<group>"; };
 		843CA7811C01B2FD00AEB78A /* CFHomeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFHomeDetailViewController.m; sourceTree = "<group>"; };
-		843CA7831C01BEE500AEB78A /* CodeDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeDetailModel.h; sourceTree = "<group>"; };
-		843CA7841C01BEE500AEB78A /* CodeDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeDetailModel.m; sourceTree = "<group>"; };
 		843CA7891C033F4000AEB78A /* CFHomeDetailNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFHomeDetailNode.h; sourceTree = "<group>"; };
 		843CA78A1C033F4000AEB78A /* CFHomeDetailNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFHomeDetailNode.m; sourceTree = "<group>"; };
 		843CA78E1C03518A00AEB78A /* codeusage.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = codeusage.html; sourceTree = "<group>"; };
@@ -269,6 +287,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		76316A191C09FA2100B97B38 /* HomeModel */ = {
+			isa = PBXGroup;
+			children = (
+				76316A1A1C09FA2100B97B38 /* CodeDetailModel.h */,
+				76316A1B1C09FA2100B97B38 /* CodeDetailModel.m */,
+				76316A1C1C09FA2100B97B38 /* CodeListModel.h */,
+				76316A1D1C09FA2100B97B38 /* CodeListModel.m */,
+			);
+			path = HomeModel;
+			sourceTree = "<group>";
+		};
+		76316A1E1C09FA2100B97B38 /* ProfileModel */ = {
+			isa = PBXGroup;
+			children = (
+				76316A211C09FA3A00B97B38 /* UserInfo.h */,
+				76316A221C09FA3A00B97B38 /* UserInfo.m */,
+			);
+			path = ProfileModel;
+			sourceTree = "<group>";
+		};
+		76316A271C09FBBC00B97B38 /* KeyChain */ = {
+			isa = PBXGroup;
+			children = (
+				76316A281C09FBBC00B97B38 /* KeychainItemWrapper.h */,
+				76316A291C09FBBC00B97B38 /* KeychainItemWrapper.m */,
+			);
+			path = KeyChain;
+			sourceTree = "<group>";
+		};
 		840B4E4F1BFB4ACE00EADDC1 = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +366,7 @@
 		840B4E721BFB5CF900EADDC1 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				76316A271C09FBBC00B97B38 /* KeyChain */,
 				840B4E921BFB708000EADDC1 /* HTMLParser */,
 			);
 			path = Vender;
@@ -361,7 +409,8 @@
 		840B4E801BFB652000EADDC1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				843CA7711C007E7300AEB78A /* HomeMode */,
+				76316A191C09FA2100B97B38 /* HomeModel */,
+				76316A1E1C09FA2100B97B38 /* ProfileModel */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -484,27 +533,20 @@
 		840B4F941C003A8F00EADDC1 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				843CA76A1C007DC400AEB78A /* ShareManager.m */,
 				843CA76B1C007DC400AEB78A /* ShareManager.h */,
+				843CA76A1C007DC400AEB78A /* ShareManager.m */,
+				76316A241C09FB1500B97B38 /* CFAccountManager.h */,
+				76316A251C09FB1500B97B38 /* CFAccountManager.m */,
 				840B4F9C1C003BB000EADDC1 /* HtmlHandler.h */,
 				840B4F9B1C003BB000EADDC1 /* HtmlHandler.m */,
 				840B4FA11C003CAB00EADDC1 /* CFAppAPIManager.h */,
 				840B4FA21C003CAB00EADDC1 /* CFAppAPIManager.m */,
 				840B4FA41C003FE200EADDC1 /* CFAppDataManager.h */,
 				840B4FA51C003FE200EADDC1 /* CFAppDataManager.m */,
+				76316A161C09E7E500B97B38 /* CFChatServerManager.h */,
+				76316A171C09E7E500B97B38 /* CFChatServerManager.m */,
 			);
 			path = Manager;
-			sourceTree = "<group>";
-		};
-		843CA7711C007E7300AEB78A /* HomeMode */ = {
-			isa = PBXGroup;
-			children = (
-				843CA7721C007E7300AEB78A /* CodeListModel.h */,
-				843CA7731C007E7300AEB78A /* CodeListModel.m */,
-				843CA7831C01BEE500AEB78A /* CodeDetailModel.h */,
-				843CA7841C01BEE500AEB78A /* CodeDetailModel.m */,
-			);
-			path = HomeMode;
 			sourceTree = "<group>";
 		};
 		843CA7751C007E9A00AEB78A /* HomeCtrl */ = {
@@ -554,6 +596,10 @@
 			children = (
 				843CA7C01C06C21A00AEB78A /* CFProfileViewController.h */,
 				843CA7BF1C06C21A00AEB78A /* CFProfileViewController.m */,
+				76316A101C099AC500B97B38 /* CFLoginViewController.h */,
+				76316A111C099AC500B97B38 /* CFLoginViewController.m */,
+				76316A131C099AD300B97B38 /* CFRegisterViewController.h */,
+				76316A141C099AD300B97B38 /* CFRegisterViewController.m */,
 			);
 			path = ProfileCtrl;
 			sourceTree = "<group>";
@@ -735,10 +781,11 @@
 			files = (
 				840B4EA41BFDB47800EADDC1 /* CFNewCodeViewController.m in Sources */,
 				840B4EDE1BFE191900EADDC1 /* YYControl.m in Sources */,
-				843CA7741C007E7300AEB78A /* CodeListModel.m in Sources */,
-				843CA7851C01BEE500AEB78A /* CodeDetailModel.m in Sources */,
+				76316A121C099AC500B97B38 /* CFLoginViewController.m in Sources */,
+				76316A181C09E7E500B97B38 /* CFChatServerManager.m in Sources */,
 				843CA7BD1C06B88900AEB78A /* CFBaseViewController.m in Sources */,
 				840B4E631BFB4ACE00EADDC1 /* ViewController.m in Sources */,
+				76316A261C09FB1500B97B38 /* CFAccountManager.m in Sources */,
 				840B4EE21BFE191900EADDC1 /* YYTableView.m in Sources */,
 				843CA9061C08912000AEB78A /* CFYouViewController.m in Sources */,
 				843CA9091C0895BD00AEB78A /* CollectionViewController.m in Sources */,
@@ -746,16 +793,20 @@
 				843CA7B71C06AF4F00AEB78A /* CFForumViewController.m in Sources */,
 				843CA77E1C007EB600AEB78A /* CFHomeCellNode.m in Sources */,
 				843CA7BA1C06B10E00AEB78A /* CFChatViewController.m in Sources */,
+				76316A231C09FA3A00B97B38 /* UserInfo.m in Sources */,
 				840B4EE11BFE191900EADDC1 /* YYSimpleWebViewController.m in Sources */,
 				840B4EDF1BFE191900EADDC1 /* YYFPSLabel.m in Sources */,
 				843CA9031C08911400AEB78A /* CFGroupViewController.m in Sources */,
+				76316A1F1C09FA2100B97B38 /* CodeDetailModel.m in Sources */,
 				843CA7781C007E9A00AEB78A /* CFHomeViewController.m in Sources */,
 				840B4EE31BFE191900EADDC1 /* YYTableViewCell.m in Sources */,
 				840B4EE01BFE191900EADDC1 /* YYPhotoGroupView.m in Sources */,
 				840B4FA31C003CAB00EADDC1 /* CFAppAPIManager.m in Sources */,
 				843CA77F1C007EB600AEB78A /* CFHomePopover.m in Sources */,
+				76316A2A1C09FBBC00B97B38 /* KeychainItemWrapper.m in Sources */,
 				840B4FA61C003FE200EADDC1 /* CFAppDataManager.m in Sources */,
 				840B4EC71BFDC8B000EADDC1 /* TextStyles.m in Sources */,
+				76316A201C09FA2100B97B38 /* CodeListModel.m in Sources */,
 				843CA7C11C06C21A00AEB78A /* CFProfileViewController.m in Sources */,
 				840B4E601BFB4ACE00EADDC1 /* AppDelegate.m in Sources */,
 				843CA78B1C033F4000AEB78A /* CFHomeDetailNode.m in Sources */,
@@ -766,6 +817,7 @@
 				843CA76C1C007DC400AEB78A /* ShareManager.m in Sources */,
 				840B4F9F1C003BB000EADDC1 /* HtmlHandler.m in Sources */,
 				840B4E7A1BFB5D7700EADDC1 /* Constant.m in Sources */,
+				76316A151C099AD300B97B38 /* CFRegisterViewController.m in Sources */,
 				840B4E981BFB708000EADDC1 /* HTMLParser.m in Sources */,
 				843CA7821C01B2FD00AEB78A /* CFHomeDetailViewController.m in Sources */,
 			);

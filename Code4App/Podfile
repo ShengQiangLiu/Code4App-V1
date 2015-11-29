@@ -15,7 +15,7 @@ pod 'DXPopover'
 pod 'KVOController', '~> 1.0.3'
 pod 'SVPullToRefresh', '~> 0.4.1'
 pod 'SVProgressHUD', '~>1.0'
-pod 'MMXXMPPFramework', '~> 3.6.13'
+pod 'XMPPFramework', '~> 3.6.6'
 pod 'JSQMessagesViewController', '~> 7.2.0'
 pod 'PPiFlatSegmentedControl', :git => 'https://github.com/pepibumur/PPiFlatSegmentedControl.git'
 
