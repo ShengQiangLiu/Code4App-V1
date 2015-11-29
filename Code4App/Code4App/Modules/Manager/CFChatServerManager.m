@@ -30,7 +30,14 @@
  2、连接服务器
  3、登录认证
  4、消息发送、接收
+
+四、常见问题
+1、登录失败: <failure xmlns="urn:ietf:params:xml:ns:xmpp-sasl"><not-authorized></not-authorized></failure>
+ 这个需要检查jid中的域设置的是否和openfire设置是否一致
+ 
 */
+
+
 
 #import "CFChatServerManager.h"
 #import "Constant.h"
@@ -84,6 +91,7 @@
 {
     _xmppStream = [[XMPPStream alloc] init];
     _xmppStream.hostName = kHostName;
+    _xmppStream.hostPort = 5222;
     [_xmppStream addDelegate:self delegateQueue:dispatch_get_main_queue()];
     [self loadModules];
     
@@ -93,8 +101,8 @@
 - (void)loadModules
 {
     //重连模块
-//    _xmppReconnect = [[XMPPReconnect alloc] init];
-//    [_xmppReconnect activate:_xmppStream];
+    _xmppReconnect = [[XMPPReconnect alloc] init];
+    [_xmppReconnect activate:_xmppStream];
 
 }
 
@@ -122,7 +130,6 @@
     
     // 连接服务器，并设置为注册状态
     _serverState = state;
-    
 }
 
 
@@ -131,6 +138,7 @@
 //用户登录
 - (void)_loginWithPassword:(NSString *)password
 {
+    NSLog(@"password : %@", password);
     NSError *error;
     if (![_xmppStream authenticateWithPassword:password error:&error]) {
         NSLog(@"认证调用失败: %@", error);
@@ -140,6 +148,7 @@
 - (void)login:(UserInfo *)user
 {
     _user = user;
+    NSLog(@"%@", user.username);
     _xmppStream.myJID = [XMPPJID jidWithString:user.username resource:@"mChat"];
     
     if ([_xmppStream isConnected]) {
@@ -204,7 +213,6 @@
 //服务器连接建立成功
 - (void)xmppStreamDidConnect:(XMPPStream *)sender
 {
-
     NSLog(@"服务器连接成功");
     switch (_serverState) {
         case kLoginServerState:
@@ -216,8 +224,7 @@
         default:
             break;
     }
-
-
+    
 }
 
 //连接超时
@@ -229,7 +236,7 @@
 //断开连接
 - (void)xmppStreamDidDisconnect:(XMPPStream *)sender withError:(NSError *)error
 {
-    NSLog(@"连接断开");
+    NSLog(@"连接断开：%@", error);
 }
 
 #pragma mark - Account

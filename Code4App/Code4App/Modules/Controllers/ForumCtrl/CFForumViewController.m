@@ -25,6 +25,7 @@
     self = [super init];
     if (self) {
         self.navigationItem.title = @"Forum";
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(rightBarButtonClick:)];
         [self initSubviews];
     }
     return self;
@@ -60,6 +61,11 @@
 - (void)viewDidLayoutSubviews
 {
     self.tableView.frame = self.view.frame;
+}
+
+- (void)rightBarButtonClick:(UIBarButtonItem *)item
+{
+    
 }
 
 #pragma mark - UITableView

@@ -9,6 +9,7 @@
 #import "UserInfo.h"
 
 @implementation UserInfo
+
 //检查用户名是否完整（包含服务器地址）
 - (NSString *)username
 {
@@ -16,7 +17,8 @@
         return _username;
     }
     else {
-        return [_username stringByAppendingFormat:@"@%@", kHostName];
+        return [_username stringByAppendingFormat:@"@%@", @"admin"];
     }
 }
+
 @end

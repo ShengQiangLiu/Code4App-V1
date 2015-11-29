@@ -16,6 +16,7 @@
 		76316A231C09FA3A00B97B38 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 76316A221C09FA3A00B97B38 /* UserInfo.m */; settings = {ASSET_TAGS = (); }; };
 		76316A261C09FB1500B97B38 /* CFAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 76316A251C09FB1500B97B38 /* CFAccountManager.m */; settings = {ASSET_TAGS = (); }; };
 		76316A2A1C09FBBC00B97B38 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 76316A291C09FBBC00B97B38 /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		768806F81C0AFFDE001E611F /* CFFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 768806F71C0AFFDE001E611F /* CFFriendsViewController.m */; settings = {ASSET_TAGS = (); }; };
 		840B4E5D1BFB4ACE00EADDC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B4E5C1BFB4ACE00EADDC1 /* main.m */; };
 		840B4E601BFB4ACE00EADDC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B4E5F1BFB4ACE00EADDC1 /* AppDelegate.m */; };
 		840B4E631BFB4ACE00EADDC1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840B4E621BFB4ACE00EADDC1 /* ViewController.m */; };
@@ -105,7 +106,6 @@
 		843CA7F51C0743ED00AEB78A /* CFSegmentedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843CA7F41C0743ED00AEB78A /* CFSegmentedViewController.m */; };
 		843CA9031C08911400AEB78A /* CFGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843CA9021C08911400AEB78A /* CFGroupViewController.m */; };
 		843CA9061C08912000AEB78A /* CFYouViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843CA9051C08912000AEB78A /* CFYouViewController.m */; };
-		843CA9091C0895BD00AEB78A /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843CA9081C0895BD00AEB78A /* CollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -128,6 +128,8 @@
 		76316A251C09FB1500B97B38 /* CFAccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFAccountManager.m; sourceTree = "<group>"; };
 		76316A281C09FBBC00B97B38 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
 		76316A291C09FBBC00B97B38 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
+		768806F61C0AFFDE001E611F /* CFFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFFriendsViewController.h; sourceTree = "<group>"; };
+		768806F71C0AFFDE001E611F /* CFFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFFriendsViewController.m; sourceTree = "<group>"; };
 		840B4E581BFB4ACE00EADDC1 /* Code4App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Code4App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		840B4E5C1BFB4ACE00EADDC1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		840B4E5E1BFB4ACE00EADDC1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -252,8 +254,6 @@
 		843CA9021C08911400AEB78A /* CFGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFGroupViewController.m; sourceTree = "<group>"; };
 		843CA9041C08912000AEB78A /* CFYouViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFYouViewController.h; sourceTree = "<group>"; };
 		843CA9051C08912000AEB78A /* CFYouViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFYouViewController.m; sourceTree = "<group>"; };
-		843CA9071C0895BD00AEB78A /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
-		843CA9081C0895BD00AEB78A /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -581,8 +581,8 @@
 				843CA7B51C06AF4F00AEB78A /* CFForumViewController.m */,
 				843CA9011C08911400AEB78A /* CFGroupViewController.h */,
 				843CA9021C08911400AEB78A /* CFGroupViewController.m */,
-				843CA9071C0895BD00AEB78A /* CollectionViewController.h */,
-				843CA9081C0895BD00AEB78A /* CollectionViewController.m */,
+				768806F61C0AFFDE001E611F /* CFFriendsViewController.h */,
+				768806F71C0AFFDE001E611F /* CFFriendsViewController.m */,
 				843CA9041C08912000AEB78A /* CFYouViewController.h */,
 				843CA9051C08912000AEB78A /* CFYouViewController.m */,
 				843CA7B81C06B10E00AEB78A /* CFChatViewController.h */,
@@ -788,8 +788,8 @@
 				76316A261C09FB1500B97B38 /* CFAccountManager.m in Sources */,
 				840B4EE21BFE191900EADDC1 /* YYTableView.m in Sources */,
 				843CA9061C08912000AEB78A /* CFYouViewController.m in Sources */,
-				843CA9091C0895BD00AEB78A /* CollectionViewController.m in Sources */,
 				840B4ED01BFDF1B200EADDC1 /* NSString+Filter.m in Sources */,
+				768806F81C0AFFDE001E611F /* CFFriendsViewController.m in Sources */,
 				843CA7B71C06AF4F00AEB78A /* CFForumViewController.m in Sources */,
 				843CA77E1C007EB600AEB78A /* CFHomeCellNode.m in Sources */,
 				843CA7BA1C06B10E00AEB78A /* CFChatViewController.m in Sources */,

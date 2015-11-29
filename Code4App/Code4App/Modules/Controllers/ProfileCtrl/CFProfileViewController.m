@@ -64,7 +64,7 @@
 #pragma mark UITableViewDatasource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -81,8 +81,14 @@
     }
     if (indexPath.section == 1) {
         cell.textLabel.text = [NSString stringWithFormat:@"aaaa %@", @"注册"];
-    } else {
+    }
+    else if (indexPath.section ==0)
+    {
         cell.textLabel.text = [NSString stringWithFormat:@"aaaa %@", @"登录"];
+    }
+    else
+    {
+        cell.textLabel.text = [NSString stringWithFormat:@"aaaa %@", @"添加好友"];
     }
     return cell;
 }
@@ -96,10 +102,14 @@
         CFRegisterViewController *registerViewCtrl = [[CFRegisterViewController alloc] init];
         [self.navigationController pushViewController:registerViewCtrl animated:YES];
     }
-    else
+    else if (indexPath.section == 0)
     {
         CFLoginViewController *loginViewCtrl = [[CFLoginViewController alloc] init];
         [self.navigationController pushViewController:loginViewCtrl animated:YES];
+    }
+    else
+    {
+        
     }
   
 }
